@@ -1,5 +1,6 @@
 import type { DataItem } from './schema';
 import { BROKERAGE_DATA } from './brokerage';
+import { LTV_DATA } from './ltv';
 
 /**
  * 규제·세율 데이터. 공식 출처를 직접 열어 확인한 값만 status '확인' 으로 기록합니다.
@@ -79,6 +80,7 @@ export const DATA: DataItem[] = [
     note: '금융기관마다 소득 인정·만기 반영 방식이 다를 수 있어 이 계산기는 단순 공식 기반 추정만 제공합니다.',
   },
   ...BROKERAGE_DATA,
+  ...LTV_DATA,
 ];
 
 export function dataFor(tool: string): DataItem[] {

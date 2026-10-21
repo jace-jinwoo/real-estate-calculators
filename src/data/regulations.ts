@@ -2,6 +2,7 @@ import type { DataItem } from './schema';
 import { BROKERAGE_DATA } from './brokerage';
 import { LTV_DATA } from './ltv';
 import { ACQ_DATA } from './acquisitionTax';
+import { CGT_DATA } from './capitalGains';
 
 /**
  * 규제·세율 데이터. 공식 출처를 직접 열어 확인한 값만 status '확인' 으로 기록합니다.
@@ -83,6 +84,7 @@ export const DATA: DataItem[] = [
   ...BROKERAGE_DATA,
   ...LTV_DATA,
   ...ACQ_DATA,
+  ...CGT_DATA,
 ];
 
 export function dataFor(tool: string): DataItem[] {
